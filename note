@@ -1,0 +1,2 @@
+geth --identity "genesis" --rpc --rpccorsdomain "*" --datadir "chain" --port "30303" --rpcapi "db,eth,net,web3,personal,miner" --networkid 15 console 2>1.txt
+geth --datadir ~/Eth/pvt/ init genesis.json
