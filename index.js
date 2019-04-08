@@ -22,7 +22,7 @@ const solc = require('solc');
 * connect to ethereum node
 */ 
 const ethereumUri = 'http://localhost:8545';
-const address = '0x4ea7d6ba13627bdfc99e3079c88ae3e7de9b25c7'; // user
+const address = '0xf061f805973a5dbef437b21f2e2834572a515cdd'; // user
 const user = 'qweszxc6304';
 
 let web3 = new Web3();
@@ -48,7 +48,7 @@ if(!web3.isConnected()){
 
 
 
-    let source = fs.readFileSync("./contracts/BasicToken.sol", 'utf8');
+    let source = fs.readFileSync("./contracts/CrowdFunding.sol", 'utf8');
     console.log('compiling contract...');
     let compiledContract = solc.compile(source);
     console.log('done');
