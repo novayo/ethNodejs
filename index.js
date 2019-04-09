@@ -29,6 +29,7 @@ let web3 = new Web3();
 web3.setProvider(new web3.providers.HttpProvider(ethereumUri));
 
 if(!web3.isConnected()){
+    // console.log('unable to connect to ethereum node at ' + ethereumUri);
     throw new Error('unable to connect to ethereum node at ' + ethereumUri);
 }else{
     console.log('connected to ehterum node at ' + ethereumUri);
@@ -86,6 +87,7 @@ if(!web3.isConnected()){
             } else {
                 console.log(`myContract.address = ${myContract.address}`); // the contract address
                 global.contractAddress = myContract.address;
+                return;
             }
         
             // Note that the returned "myContractReturned" === "myContract",
@@ -95,9 +97,9 @@ if(!web3.isConnected()){
         }
     });
 
-    (function wait () {
-        setTimeout(wait, 1000);
-    })();
+    // (function wait () {
+    //     setTimeout(wait, 1000);
+    // })();
 
 
 }
